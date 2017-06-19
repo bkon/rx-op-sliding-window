@@ -70,3 +70,18 @@ or, if you're feeling lucky:
 Observable.prototype.slidingWindow = windowOp;
 out$ = in$.slidingWindow(100);
 ```
+
+# Caveats
+
+Be aware that window buffer is kept in the memory. If you're using a
+very long window with events emitted very frequently, you may run into
+an large amount of memory being consumed.
+
+# RxOp collection
+
+* [rx-op-lossless-throttle](https://github.com/bkon/rx-op-lossless-throttle)
+  - Lossless throttle behavior for RxJS.
+* [rx-op-sliding-window](https://github.com/bkon/rx-op-sliding-window)
+  - "Smooth" sliding window operator for RxJS
+* [rx-op-debounce-throttle](https://github.com/bkon/rx-op-debounce-throttle)
+  - A hybrid debounce + throttle operator for RxJS
